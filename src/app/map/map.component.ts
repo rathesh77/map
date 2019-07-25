@@ -11,6 +11,16 @@ import { Countries } from '../countries';
 export class MapComponent implements OnInit {
 
 map : any;
+icone : any = L.icon({
+    iconUrl : '/assets/images/marker-icon.png',
+    shadowUrl: '/assets/images//marker-shadow.png',
+
+    iconSize:     [20, 40], // size of the icon
+    shadowSize:   [30, 30], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  });
   constructor() {
   }
 
@@ -23,31 +33,16 @@ map : any;
         minZoom: 0
       }).addTo(this.map);
 
-      let icone =   L.icon({
-          iconUrl : '/assets/images/marker-icon.png',
-          shadowUrl: '/assets/images//marker-shadow.png',
-
-          iconSize:     [20, 40], // size of the icon
-
-
-          shadowSize:   [30, 30], // size of the shadow
-          iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-          shadowAnchor: [4, 62],  // the same for the shadow
-          popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-        });
-        console.log(Countries);
+        //console.log(Countries);
         for ( let country of Countries){
-          L.marker([country.latitude, country.longitude],{icon : icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>").openPopup();;
+          L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>").openPopup();;
       }
-      this.map.on('click',(location)=>{
-        L.popup().setLatLng(location.latlng).setContent('you clicked at' + location.latlng.toString()).addTo(this.map);
-
-      });
+      this.map.on('click',this.onclick);
 
   }
 
   onclick(location)
   {
-    L.popup().setLatLng(location).setContent('you clicked at' + location).addTo(this.map);
+    L.popup().setLatLng(location.latlng).setContent('you clicked at' + location.latlng.toString()).addTo(this.map);
   }
 }
