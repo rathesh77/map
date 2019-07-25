@@ -12,8 +12,8 @@ export class MapComponent implements OnInit {
 
 map : any;
 icone : any = L.icon({
-    iconUrl : '/assets/images/marker-icon.png',
-    shadowUrl: '/assets/images//marker-shadow.png',
+    iconUrl : 'assets/images/marker-icon.png',
+    shadowUrl: 'assets/images//marker-shadow.png',
 
     iconSize:     [20, 40], // size of the icon
     shadowSize:   [30, 30], // size of the shadow
@@ -25,8 +25,7 @@ icone : any = L.icon({
   }
 
   ngOnInit() {
-    this.map = L.map('map').setView([48.854546, 2.347366], 5);
-    // load a tile layer
+    this.map = L.map('map').setView([47.931882, 4.746096], 5);
     L.tileLayer(/*'http://{s}.tile.osm.org/{z}/{x}/{y}.png'*/'http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
       {
         maxZoom: 17,
@@ -39,7 +38,7 @@ icone : any = L.icon({
       }
       this.map.on('click',(location)=>{
         L.popup().setLatLng(location.latlng).setContent('you clicked at' + location.latlng.toString()).addTo(this.map);
-      
+
       });
 
   }
