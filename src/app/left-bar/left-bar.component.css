@@ -1,0 +1,29 @@
+nav>ul>li
+{
+  list-style-type: none;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: grey;
+}
+nav{
+padding-top: 20px;
+
+}
+.icon{
+
+  position: relative;
+  right: 20px;
+}
+@media screen and ( max-width:992px)
+{
+  nav>ul>li
+  {
+    display: inline-block;
+    margin: 5px;
+
+  }
+}
+nav>ul>li:hover
+{
+  color: blue
+}
