@@ -49,7 +49,7 @@ icone : any = L.icon({
       this.map.removeLayer(this.markers[i]);
       this.markers = [];
     for ( let country of Countries){
-      let contains : booleans = true;
+      let contains : boolean = true;
       for( let i = 0 ; i < input.length;i++){
       if ( country.country[i] != input[i])
       {
