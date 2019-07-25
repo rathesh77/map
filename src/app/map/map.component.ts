@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { Countries } from '../countries';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 
 @Component({
@@ -9,8 +10,10 @@ import { Countries } from '../countries';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-
+input : string = "";
 map : any;
+ markers : any[] = [];
+
 icone : any = L.icon({
     iconUrl : 'assets/images/marker-icon.png',
     shadowUrl: 'assets/images//marker-shadow.png',
@@ -33,13 +36,32 @@ icone : any = L.icon({
       }).addTo(this.map);
 
         //console.log(Countries);
-        for ( let country of Countries){
-         L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>").openPopup();;
-      }
+
       this.map.on('click',(location)=>{
         L.popup().setLatLng(location.latlng).setContent('you clicked at' + location.latlng.toString()).addTo(this.map);
 
       });
 
+  }
+  detectCountry(input)
+  {
+    for ( let i = 0 ; i < this.markers.length;i++)
+      this.map.removeLayer(this.markers[i]);
+      this.markers = [];
+    for ( let country of Countries){
+      let contains : booleans = true;
+      for( let i = 0 ; i < input.length;i++){
+      if ( country.country[i] != input[i])
+      {
+        contains = false;
+        break;
+      }
+      if ( contains){
+      let marker =new L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>");
+      this.map.addLayer(marker);
+      this.markers.push(marker);
+    }
+}
+  }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "map-api",
   "version": "0.0.0",
-  "main":"main.js",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron":"electron .",
+    "electron": "electron .",
     "electron-build": "ng build --prod"
   },
   "private": true,
@@ -37,6 +37,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "electron": "^5.0.8",
+    "electron-packager": "^14.0.3",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
