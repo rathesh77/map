@@ -35,14 +35,12 @@ icone : any = L.icon({
 
         //console.log(Countries);
         for ( let country of Countries){
-          L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>").openPopup();;
+         L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>").openPopup();;
       }
-      this.map.on('click',this.onclick);
+      this.map.on('click',(location)=>{
+        L.popup().setLatLng(location.latlng).setContent('you clicked at' + location.latlng.toString()).addTo(this.map);
+      
+      });
 
-  }
-
-  onclick(location)
-  {
-    L.popup().setLatLng(location.latlng).setContent('you clicked at' + location.latlng.toString()).addTo(this.map);
   }
 }

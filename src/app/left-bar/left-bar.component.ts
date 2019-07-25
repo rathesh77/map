@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-bar.component.css']
 })
 export class LeftBarComponent implements OnInit {
-
+display:string = "block";
 links : string [] =
 [
-  
+
   'Plan',
   'Satellite',
   'Relief',
@@ -30,6 +30,14 @@ links : string [] =
   constructor() { }
 
   ngOnInit() {
+  }
+  disp()
+  {
+    if ( this.display =='none')
+    this.display = "block";
+    else
+    this.display = "none";
+
   }
 
 }
