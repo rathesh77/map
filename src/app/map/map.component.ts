@@ -57,7 +57,7 @@ icone : any = L.icon({
       if ( input == '')
       return;
       for( let i = 0 ; i < input.length;i++){
-      if ( country.country[i] != input[i])
+      if ( country.country.toLowerCase()[i] != input[i].toLowerCase())
       {
         contains = false;
         break;
