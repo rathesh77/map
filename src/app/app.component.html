@@ -1,1 +1,10 @@
-<app-left-bar> </app-left-bar>
+<div style="position:absolute;top:0;bottom:0;left:0;right:0;background-color: #3498db;">
+  <div id="loader-container">
+    <p id="loadingText">Loading</p>
+  </div>
+</div>
+
+<div *ngIf="displayContent">
+  <app-left-bar> </app-left-bar>
+
+</div>
