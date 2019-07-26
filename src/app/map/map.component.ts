@@ -3,23 +3,24 @@ import * as L from 'leaflet';
 import { Countries } from '../countries';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
-
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+
+
 input : string = "";
 map : any;
- markers : any[] = [];
+markers : any[] = [];
 
 icone : any = L.icon({
     iconUrl : 'assets/images/marker-icon.png',
     shadowUrl: 'assets/images//marker-shadow.png',
 
-    iconSize:     [20, 40], // size of the icon
-    shadowSize:   [30, 30], // size of the shadow
+    iconSize:     [25, 41], // size of the icon
+    shadowSize:   [41, 41], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
@@ -39,6 +40,7 @@ icone : any = L.icon({
 
       this.map.on('click',(location)=>{
         L.popup().setLatLng(location.latlng).setContent('you clicked at' + location.latlng.toString()).addTo(this.map);
+      this.map.panTo(location.latlng);
 
       });
 
@@ -58,6 +60,7 @@ icone : any = L.icon({
       }
       if ( contains){
       let marker =new L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>");
+
       this.map.addLayer(marker);
       this.markers.push(marker);
     }

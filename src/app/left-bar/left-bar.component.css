@@ -2,7 +2,7 @@ nav>ul>li
 {
   list-style-type: none;
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 16px;
   color: grey;
 }
 nav{
@@ -14,7 +14,7 @@ bottom:0;
 z-index: 2;
 background-color: white;
 min-width:270px;
-width: auto;
+box-shadow: 1px 1px 5px 2px silver;
 
 }
 .icon{
