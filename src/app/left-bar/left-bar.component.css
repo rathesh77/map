@@ -15,7 +15,8 @@ z-index: 2;
 background-color: white;
 min-width:270px;
 box-shadow: 1px 1px 5px 2px silver;
-
+min-height: 100vh;
+overflow-y: auto;
 }
 .icon{
 
