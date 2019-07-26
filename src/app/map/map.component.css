@@ -27,7 +27,7 @@ border-left: 0px;
 }
 #icon1
 {
-  background: url('/assets/images/hamburger.png');
+  background: url('../../assets/images/hamburger.png');
   background-color: white;
   background-repeat:  no-repeat;
   background-size: 20px 20px;
@@ -36,7 +36,7 @@ border-left: 0px;
 #icon2
 {
 
-  background: url('/assets/images/search.png');
+  background: url('../../assets/images/search.png');
   background-color: white;
   background-repeat:  no-repeat;
   background-size: 20px 20px;
