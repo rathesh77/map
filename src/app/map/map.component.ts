@@ -72,4 +72,16 @@ this.queries.push(country.country);
 }
   }
   }
+
+  redirect(query)
+  {
+    console.log(query);
+    for ( let country of Countries)
+    {
+      if ( country.country == query.country){
+        console.log(query);
+        this.map.flyTo(country.latitude,country.longitude);
+    }
+  }
+  }
 }

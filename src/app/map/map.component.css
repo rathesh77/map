@@ -22,6 +22,8 @@ border: 0px;
 input{
 border-top: 0px;
 border-bottom: 0px;
+border-left: 0px;
+
 }
 #icon1
 {
@@ -44,19 +46,20 @@ border-bottom: 0px;
 
 .queries>li{
   list-style-type: none;
-  margin: 5px
+  margin: 5px;
+  cursor: pointer;
+
 }
 .queries
 {
+  border-top:1px solid silver;
 position:absolute;
-right:146px;
-top:49px;
+right:147px;
+top:48px;
 width:344px;
 z-index:3;
 background-color:white;
 overflow:hidden;
-padding: 10px;
-
 max-height: 400px;
 overflow-y: auto;
 }
