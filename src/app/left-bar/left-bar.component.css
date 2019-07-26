@@ -4,6 +4,7 @@ nav>ul>li
   margin-bottom: 5px;
   font-size: 16px;
   color: grey;
+  cursor: pointer;
 }
 nav{
 padding-top: 20px;

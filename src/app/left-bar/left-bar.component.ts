@@ -92,11 +92,14 @@ links : any[] =[
   }
   disp()
   {
-    if ( this.display =='none')
-    this.display = "block";
-    else
-    this.display = "none";
+
 
   }
-
+onNotify()
+{
+  if ( this.display =='none')
+  this.display = "block";
+  else
+  this.display = "none";
+}
 }

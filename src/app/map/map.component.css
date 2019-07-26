@@ -4,3 +4,56 @@
 height: 100vh;
 z-index: 1 !important;
 }
+.input-group.mb-3
+{
+  z-index: 3;
+  position:absolute !important;
+  right: 0;
+  top: 10px;
+  width: 490px
+}
+.input-group-text
+{
+  height: 38px;
+  width: 50px;
+border: 0px;
+
+}
+input{
+border-top: 0px;
+border-bottom: 0px;
+}
+#icon1
+{
+  background: url('/assets/images/hamburger.png');
+  background-color: white;
+  background-repeat:  no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+#icon2
+{
+
+  background: url('/assets/images/search.png');
+  background-color: white;
+  background-repeat:  no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+
+}
+
+.queries>li{
+  list-style-type: none;
+  margin: 5px
+}
+.queries
+{
+position:absolute;
+right:146px;
+top:49px;
+width:344px;
+z-index:3;
+background-color:white;
+overflow:hidden;
+padding: 10px;
+}

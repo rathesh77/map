@@ -1,5 +1,16 @@
-<div style="position:absolute;right:20px;top:20px;z-index:2">
 
-  <input type="text" name="" value="Search..." class="form-control" [(ngModel)]="input" (input)="detectCountry(input)">
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+      <span id="icon1" class="input-group-text" (click)='notify.emit()'></span>
+    </div>
+  <input type="text" class="form-control col-lg-6" placeholder="Recherchez dans maps..." [(ngModel)]="input" (input)="detectCountry(input)">
+<div class="input-group-append">
+    <span id="icon2" class="input-group-text"  (click)='detectCountry(input)'></span>
+  </div>
+</div>
+<div class="queries">
+
+<li *ngFor="let query of queries"> <div style="background:url(/assets/images/marqueur.png);width:24px;height:24px;background-size:24px 24px;background-repeat:no-repeat;background-position:center;display:inline-block;margin-right:20px"> </div>{{query}}</li>
+
 </div>
 <div id="map"></div>

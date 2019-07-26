@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import * as L from 'leaflet';
 import { Countries } from '../countries';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
@@ -10,10 +10,11 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 })
 export class MapComponent implements OnInit {
 
-
+@Output() notify =  new EventEmitter();
 input : string = "";
 map : any;
 markers : any[] = [];
+queries : string[] = [];
 
 icone : any = L.icon({
     iconUrl : 'assets/images/marker-icon.png',
@@ -50,20 +51,24 @@ icone : any = L.icon({
     for ( let i = 0 ; i < this.markers.length;i++)
       this.map.removeLayer(this.markers[i]);
       this.markers = [];
+      this.queries = [];
     for ( let country of Countries){
       let contains : boolean = true;
+      if ( input == '')
+      return;
       for( let i = 0 ; i < input.length;i++){
       if ( country.country[i] != input[i])
       {
         contains = false;
         break;
       }
-      if ( contains){
-      let marker =new L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>");
+}
+if ( contains){
+let marker =new L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>");
 
-      this.map.addLayer(marker);
-      this.markers.push(marker);
-    }
+this.map.addLayer(marker);
+this.markers.push(marker);
+this.queries.push(country.country);
 }
   }
   }
