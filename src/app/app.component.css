@@ -1,345 +1,186 @@
 
-
-.nuvem,
-.car,
-.predio {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.predio_2 {
-    top: -13px;
-    left: -2px;
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  z-index: 1;
 }
 
-.predio_1 {
-    top: -13px;
-    left: -6px;
+#square1 {
+  height: 0px;
+  width: 0px;
+  background-color: #CCFFCC;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -30px;
+  margin-left: -80px;
+  -webkit-transform: rotate(-45deg);
+  -webkit-animation: square1anim 1.6s infinite linear;
+}
+#square2 {
+  height: 0px;
+  width: 0px;
+  background-color: #00ee77;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -30px;
+  margin-left: -30px;
+  -webkit-transform: rotate(-45deg);
+  -webkit-animation: square2anim 1.6s infinite linear;
+}
+#square3 {
+  height: 0px;
+  width: 0px;
+  background-color: #00aa99;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -30px;
+  margin-left: 30px;
+  -webkit-transform: rotate(-45deg);
+  -webkit-animation: square3anim 1.6s infinite linear;
+}
+#square4 {
+  height: 0px;
+  width: 0px;
+  background-color: #0077aa;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -30px;
+  margin-left: 80px;
+  -webkit-transform: rotate(-45deg);
+  -webkit-animation: square4anim 1.6s infinite linear;
 }
 
-.car-animation{
-    animation: carFrames ease 18s;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%;
-    -webkit-animation: carFrames ease 18s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-transform-origin: 50% 50%;
-    -moz-animation: carFrames ease 18s;
-    -moz-animation-iteration-count: infinite;
-    -moz-transform-origin: 50% 50%;
-    -o-animation: carFrames ease 18s;
-    -o-animation-iteration-count: infinite;
-    -o-transform-origin: 50% 50%;
-    -ms-animation: carFrames ease 18s;
-    -ms-animation-iteration-count: infinite;
-    -ms-transform-origin: 50% 50%;
+@-webkit-keyframes square1anim {
+  0% {
+    -webkit-transform: rotate(-45deg);
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: -80px;
   }
+  20% {
+    -webkit-transform: rotate(0deg);
+    height: 80px;
+    width: 80px;
+    margin-left: -125px;
+    margin-top: -60px;
+  }
+  40% {
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: -80px;
+    -webkit-transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
 
-  @keyframes carFrames{
-    0% {
-      transform:  translate(0px,20px)  ;
-    }
-    100% {
-      transform:  translate(-420px,255px)  ;
-    }
+@-webkit-keyframes square2anim {
+  0% {
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: -30px;
   }
+  5% {
+    -webkit-transform: rotate(-45deg);
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  25% {
+    -webkit-transform: rotate(0deg);
+    height: 80px;
+    width: 80px;
+    margin-left: -70px;
+    margin-top: -60px;
+  }
+  45% {
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: -30px;
+    -webkit-transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
 
-  @-moz-keyframes carFrames{
-    0% {
-      -moz-transform:  translate(0px,20px)  ;
-    }
-    100% {
-      -moz-transform:  translate(-420px,255px)  ;
-    }
+@-webkit-keyframes square3anim {
+  0% {
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: 30px;
   }
+  10% {
+    -webkit-transform: rotate(-45deg);
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: 30px;
+  }
+  30% {
+    -webkit-transform: rotate(0deg);
+    height: 80px;
+    width: 80px;
+    margin-left: 0px;
+    margin-top: -60px;
+  }
+  50% {
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: 20px;
+    -webkit-transform: rotate(45deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
 
-  @-webkit-keyframes carFrames {
-    0% {
-      -webkit-transform:  translate(0px,20px)  ;
-    }
-    100% {
-      -webkit-transform:  translate(-420px,255px)  ;
-    }
+@-webkit-keyframes square4anim {
+  0% {
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: 80px;
   }
-
-  @-o-keyframes carFrames {
-    0% {
-      -o-transform:  translate(0px,20px)  ;
-    }
-    100% {
-      -o-transform:  translate(-420px,255px)  ;
-    }
+  15% {
+    -webkit-transform: rotate(-45deg);
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: 80px;
   }
-
-  @-ms-keyframes carFrames {
-    0% {
-      -ms-transform:  translate(0px,20px)  ;
-    }
-    100% {
-      -ms-transform:  translate(-420px,255px)  ;
-    }
+  35% {
+    -webkit-transform: rotate(0deg);
+    height: 80px;
+    width: 80px;
+    margin-left: 50px;
+    margin-top: -60px;
   }
-.nuvem_1 {
-    animation: nuvem_1_Frames linear 4s;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%;
-    -webkit-animation: nuvem_1_Frames linear 4s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-transform-origin: 50% 50%;
-    -moz-animation: nuvem_1_Frames linear 4s;
-    -moz-animation-iteration-count: infinite;
-    -moz-transform-origin: 50% 50%;
-    -o-animation: nuvem_1_Frames linear 4s;
-    -o-animation-iteration-count: infinite;
-    -o-transform-origin: 50% 50%;
-    -ms-animation: nuvem_1_Frames linear 4s;
-    -ms-animation-iteration-count: infinite;
-    -ms-transform-origin: 50% 50%;
+  55% {
+    height: 0px;
+    width: 0px;
+    margin-top: -30px;
+    margin-left: 80px;
+    -webkit-transform: rotate(45deg);
   }
-
-  @keyframes nuvem_1_Frames{
-    0% {
-      transform:  translate(0px,0px)  ;
-    }
-    50% {
-      transform:  translate(0px,50px)  ;
-    }
-    100% {
-      transform:  translate(0px,0px)  ;
-    }
-    100% {
-      transform:  translate(0px,0px)  ;
-    }
+  100% {
+    -webkit-transform: rotate(45deg);
   }
-
-  @-moz-keyframes nuvem_1_Frames{
-    0% {
-      -moz-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -moz-transform:  translate(0px,50px)  ;
-    }
-    100% {
-      -moz-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -moz-transform:  translate(0px,0px)  ;
-    }
-  }
-
-  @-webkit-keyframes nuvem_1_Frames {
-    0% {
-      -webkit-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -webkit-transform:  translate(0px,50px)  ;
-    }
-    100% {
-      -webkit-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -webkit-transform:  translate(0px,0px)  ;
-    }
-  }
-
-  @-o-keyframes nuvem_1_Frames {
-    0% {
-      -o-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -o-transform:  translate(0px,50px)  ;
-    }
-    100% {
-      -o-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -o-transform:  translate(0px,0px)  ;
-    }
-  }
-
-  @-ms-keyframes nuvem_1_Frames {
-    0% {
-      -ms-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -ms-transform:  translate(0px,50px)  ;
-    }
-    100% {
-      -ms-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -ms-transform:  translate(0px,0px)  ;
-    }
-  }
-
-  .nuvem_2 {
-    animation: nuvem_2_Frames linear 4s;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%;
-    -webkit-animation: nuvem_2_Frames linear 4s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-transform-origin: 50% 50%;
-    -moz-animation: nuvem_2_Frames linear 4s;
-    -moz-animation-iteration-count: infinite;
-    -moz-transform-origin: 50% 50%;
-    -o-animation: nuvem_2_Frames linear 4s;
-    -o-animation-iteration-count: infinite;
-    -o-transform-origin: 50% 50%;
-    -ms-animation: nuvem_2_Frames linear 4s;
-    -ms-animation-iteration-count: infinite;
-    -ms-transform-origin: 50% 50%;
-  }
-
-  @keyframes nuvem_2_Frames{
-    0% {
-      transform:  translate(0px,75px)  ;
-    }
-    50% {
-      transform:  translate(0px,0px)  ;
-    }
-    100% {
-      transform:  translate(0px,75px)  ;
-    }
-    100% {
-      transform:  translate(0px,75px)  ;
-    }
-  }
-
-  @-moz-keyframes nuvem_2_Frames{
-    0% {
-      -moz-transform:  translate(0px,75px)  ;
-    }
-    50% {
-      -moz-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -moz-transform:  translate(0px,75px)  ;
-    }
-    100% {
-      -moz-transform:  translate(0px,75px)  ;
-    }
-  }
-
-  @-webkit-keyframes nuvem_2_Frames {
-    0% {
-      -webkit-transform:  translate(0px,75px)  ;
-    }
-    50% {
-      -webkit-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -webkit-transform:  translate(0px,75px)  ;
-    }
-    100% {
-      -webkit-transform:  translate(0px,75px)  ;
-    }
-  }
-
-  @-o-keyframes nuvem_2_Frames {
-    0% {
-      -o-transform:  translate(0px,75px)  ;
-    }
-    50% {
-      -o-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -o-transform:  translate(0px,75px)  ;
-    }
-    100% {
-      -o-transform:  translate(0px,75px)  ;
-    }
-  }
-
-  @-ms-keyframes nuvem_2_Frames {
-    0% {
-      -ms-transform:  translate(0px,75px)  ;
-    }
-    50% {
-      -ms-transform:  translate(0px,0px)  ;
-    }
-    100% {
-      -ms-transform:  translate(0px,75px)  ;
-    }
-    100% {
-      -ms-transform:  translate(0px,75px)  ;
-    }
-  }
-
-
-.nuvem_3 {
-    animation: nuvem_3_Frames linear 4s;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%;
-    -webkit-animation: nuvem_3_Frames linear 4s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-transform-origin: 50% 50%;
-    -moz-animation: nuvem_3_Frames linear 4s;
-    -moz-animation-iteration-count: infinite;
-    -moz-transform-origin: 50% 50%;
-    -o-animation: nuvem_3_Frames linear 4s;
-    -o-animation-iteration-count: infinite;
-    -o-transform-origin: 50% 50%;
-    -ms-animation: nuvem_3_Frames linear 4s;
-    -ms-animation-iteration-count: infinite;
-    -ms-transform-origin: 50% 50%;
-  }
-
-  @keyframes nuvem_3_Frames{
-    0% {
-      transform:  translate(0px,0px)  ;
-    }
-    50% {
-      transform:  translate(0px,100px)  ;
-    }
-    100% {
-      transform:  translate(0px,0px)  ;
-    }
-  }
-
-  @-moz-keyframes nuvem_3_Frames{
-    0% {
-      -moz-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -moz-transform:  translate(0px,100px)  ;
-    }
-    100% {
-      -moz-transform:  translate(0px,0px)  ;
-    }
-  }
-
-  @-webkit-keyframes nuvem_3_Frames {
-    0% {
-      -webkit-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -webkit-transform:  translate(0px,100px)  ;
-    }
-    100% {
-      -webkit-transform:  translate(0px,0px)  ;
-    }
-  }
-
-  @-o-keyframes nuvem_3_Frames {
-    0% {
-      -o-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -o-transform:  translate(0px,100px)  ;
-    }
-    100% {
-      -o-transform:  translate(0px,0px)  ;
-    }
-  }
-
-  @-ms-keyframes nuvem_3_Frames {
-    0% {
-      -ms-transform:  translate(0px,0px)  ;
-    }
-    50% {
-      -ms-transform:  translate(0px,100px)  ;
-    }
-    100% {
-      -ms-transform:  translate(0px,0px)  ;
-    }
-  }
+}
