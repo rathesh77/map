@@ -50,6 +50,9 @@ border-left: 0px;
   cursor: pointer;
 
 }
+.queries>li:hover{
+background-color: lightgrey;
+}
 .queries
 {
   border-top:1px solid silver;
@@ -72,4 +75,17 @@ overflow-y: auto;
 }
 ::-webkit-scrollbar-thumb:hover {
       background: grey;
+}
+
+.details
+{
+  position: absolute;
+  z-index: 2;
+max-width: 500px;
+top: 50px;
+left: 40%;
+right: 50%;
+
+background-color: white;
+
 }

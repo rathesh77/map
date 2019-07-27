@@ -15,7 +15,6 @@ input : string = "";
 map : any;
 markers : any[] = [];
 queries : string[] = [];
-
 icone : any = L.icon({
     iconUrl : 'assets/images/marker-icon.png',
     shadowUrl: 'assets/images//marker-shadow.png',
@@ -31,6 +30,8 @@ icone : any = L.icon({
 
   ngOnInit() {
     this.map = L.map('map').setView([47.931882, 4.746096], 5);
+
+    this.onMapReady(this.map);
     L.tileLayer(/*'http://{s}.tile.osm.org/{z}/{x}/{y}.png'*/'http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
       {
         maxZoom: 17,
@@ -54,8 +55,9 @@ icone : any = L.icon({
       this.queries = [];
     for ( let country of Countries){
       let contains : boolean = true;
-      if ( input == '')
+      if ( input == ''){
       return;
+    }
       for( let i = 0 ; i < input.length;i++){
       if ( country.country.toLowerCase()[i] != input[i].toLowerCase())
       {
@@ -75,13 +77,18 @@ this.queries.push(country.country);
 
   redirect(query)
   {
-    console.log(query);
+  //  console.log(query);
     for ( let country of Countries)
     {
-      if ( country.country == query.country){
+      if ( country.country == query){
         console.log(query);
-        this.map.flyTo(country.latitude,country.longitude);
+      this.map.flyTo([country.latitude,country.longitude]);
     }
   }
+  }
+  onMapReady(map: L.Map) {
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 0);
   }
 }

@@ -13,4 +13,5 @@
 <li *ngFor="let query of queries"  (click)="redirect(query)"> <div style="background:url(/assets/images/marqueur.png);width:24px;height:24px;background-size:24px 24px;background-repeat:no-repeat;background-position:center;display:inline-block;margin-right:20px"> </div>{{query}}</li>
 
 </div>
-<div id="map"></div>
+
+<div id="map" leaflet (leafletMapReady)="onMapReady($event)"></div>
