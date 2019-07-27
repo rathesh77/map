@@ -13,6 +13,6 @@ export class AppComponent implements OnInit {
   {
     setTimeout(()=>{
       this.displayContent = true;
-    },3000)
+    },5500)
   }
 }

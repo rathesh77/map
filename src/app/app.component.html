@@ -1,8 +1,19 @@
-<div style="position:absolute;top:0;bottom:0;left:0;right:0;background-color: #3498db;">
-  <div id="loader-container">
-    <p id="loadingText">Loading</p>
-  </div>
-</div>
+  <div *ngIf="!displayContent" style="background: #5e6061">
+    <main role="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <img class="img-fluid mx-auto d-block car car-animation" src="https://rpm.com.br/images/anima/car.png" alt="Car">
+                        <img class="img-fluid mx-auto d-block predio predio_1" src="https://rpm.com.br/images/anima/predio_1.png" alt="Predio">
+                        <img class="img-fluid mx-auto d-block predio predio_2" src="https://rpm.com.br/images/anima/predio_2.png" alt="Predio">
+                        <img class="img-fluid mx-auto d-block nuvem nuvem_3" src="https://rpm.com.br/images/anima/nuvem_3.png" alt="Nuvem">
+                        <img class="img-fluid mx-auto d-block nuvem nuvem_2" src="https://rpm.com.br/images/anima/nuvem_2.png" alt="Nuvem">
+                        <img class="img-fluid mx-auto d-block nuvem nuvem_1" src="https://rpm.com.br/images/anima/nuvem_1.png" alt="Nuvem">
+                        <img class="img-fluid mx-auto d-block" src="https://rpm.com.br/images/anima/base.png" alt="Base">
+                    </div>
+                </div>
+            </div>
+        </main>  </div>
 
 <div *ngIf="displayContent">
   <app-left-bar> </app-left-bar>
