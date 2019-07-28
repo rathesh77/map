@@ -31,7 +31,6 @@ icone : any = L.icon({
   ngOnInit() {
     this.map = L.map('map').setView([47.931882, 4.746096], 5);
 
-    this.onMapReady(this.map);
     L.tileLayer(/*'http://{s}.tile.osm.org/{z}/{x}/{y}.png'*/'http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
       {
         maxZoom: 17,
@@ -86,9 +85,5 @@ this.queries.push(country.country);
     }
   }
   }
-  onMapReady(map: L.Map) {
-      setTimeout(() => {
-        map.invalidateSize();
-      }, 0);
-  }
+
 }
