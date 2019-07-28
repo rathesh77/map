@@ -66,7 +66,7 @@ icone : any = L.icon({
       }
 }
 if ( contains){
-let marker =new L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>");
+let marker =L.marker([country.latitude, country.longitude],{icon : this.icone}).addTo(this.map).bindPopup("<b>Vous êtes en "+country.country+"</b>");
 
 this.map.addLayer(marker);
 this.markers.push(marker);
