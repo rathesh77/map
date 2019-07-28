@@ -18,7 +18,7 @@ function createWindow () {
 
 
   win.loadURL(`file://${__dirname}/dist/map-api/index.html`)
- // win.removeMenu();
+  win.removeMenu();
 
 
 
