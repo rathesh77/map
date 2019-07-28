@@ -1,0 +1,10 @@
+
+<nav [ngClass]="display">
+<div class="h3" style="text-align:center !important">  Rathesh Maps</div>
+  <ul>
+    <hr>
+    <li *ngFor="let link of links; index as num;"> <span class="icon"> <img height="24" [src]="link.icon" alt="icone" /></span>{{link.name}}     <span *ngIf="num != 0 && num%4==0" > <hr></span></li>
+  </ul>
+</nav>
+
+<app-map (notify)="onNotify()"></app-map>

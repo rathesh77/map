@@ -1,0 +1,92 @@
+@import '~node_modules/lesshat/lesshat';
+#map
+{
+
+height: 100vh;
+z-index: 1 !important;
+}
+.input-group.mb-3
+{
+  z-index: 3;
+  position:absolute !important;
+  right: 0;
+  top: 10px;
+  width: 490px
+}
+.input-group-text
+{
+  height: 38px;
+  width: 50px;
+border: 0px;
+
+}
+input{
+border-top: 0px;
+border-bottom: 0px;
+border-left: 0px;
+
+}
+#icon1
+{
+  background: url('../../assets/images/hamburger.png');
+  background-color: white;
+  background-repeat:  no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+#icon2
+{
+
+  background: url('../../assets/images/search.png');
+  background-color: white;
+  background-repeat:  no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+
+}
+
+.queries>li{
+  list-style-type: none;
+  margin: 5px;
+  cursor: pointer;
+
+}
+.queries>li:hover{
+background-color: lightgrey;
+}
+.queries
+{
+  border-top:1px solid silver;
+position:absolute;
+right:147px;
+top:48px;
+width:344px;
+z-index:3;
+background-color:white;
+overflow:hidden;
+max-height: 400px;
+overflow-y: auto;
+}
+::-webkit-scrollbar {
+      width: 7px;
+}
+::-webkit-scrollbar-thumb {
+      background:darkgrey;
+      border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+      background: grey;
+}
+
+.details
+{
+  position: absolute;
+  z-index: 2;
+max-width: 500px;
+top: 50px;
+left: 40%;
+right: 50%;
+
+background-color: white;
+
+}

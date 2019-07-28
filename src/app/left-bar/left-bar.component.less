@@ -1,0 +1,59 @@
+@import '~node_modules/lesshat/lesshat';
+
+nav>ul>li
+{
+  list-style-type: none;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: grey;
+  cursor: pointer;
+}
+nav{
+padding-top: 20px;
+position: absolute;
+left:0;
+top:0;
+bottom:0;
+z-index: 2;
+background-color: white;
+min-width:270px;
+box-shadow: 1px 1px 5px 2px silver;
+min-height: 100vh;
+overflow-y: auto;
+}
+.icon{
+
+  position: relative;
+  right: 20px;
+}
+@media screen and ( max-width:702px)
+{
+  nav
+  {
+    visibility:hidden;
+    display: none;
+  }
+}
+nav>ul>li:hover
+{
+  color: blue
+}
+.form-control{
+  display: inline-block !important;
+}
+.block{
+  display: block;
+}
+.none{
+  display: none;
+}
+::-webkit-scrollbar {
+      width: 7px;
+}
+::-webkit-scrollbar-thumb {
+      background:darkgrey;
+      border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+      background: grey;
+}
